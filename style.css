@@ -865,7 +865,8 @@ body {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        margin-bottom: 40px;
+        /* Colocamos a "mola" aqui! Isso empurra as redes e os botões juntos pro fundo */
+        margin-bottom: auto; 
     }
 
     .menu-lateral-links a {
@@ -888,7 +889,8 @@ body {
 
     /* Área Siga-nos */
     .menu-lateral-social {
-        margin-bottom: auto; /* Joga os botões finais pra baixo */
+        /* Tiramos a "mola" (auto) daqui e colocamos um espaço fixo e elegante */
+        margin-bottom: 24px; 
     }
 
     .menu-lateral-social p {
