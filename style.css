@@ -785,6 +785,151 @@ body {
 }
 
 /* =========================================
+   MENU LATERAL (DRAWER) - ESTILOS BASE
+========================================= */
+/* Oculta o botão, overlay e menu lateral em telas grandes */
+.btn-menu-mobile, .menu-overlay, .menu-lateral {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Mostra o botão hambúrguer */
+    .btn-menu-mobile {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--brand-purple);
+        cursor: pointer;
+    }
+
+    /* Fundo escuro atrás do menu */
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+    
+    .menu-overlay.ativo {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* A Gaveta Branca */
+    .menu-lateral {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido pra fora da tela direita */
+        width: 85%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: #FFFFFF;
+        z-index: 999;
+        padding: 30px 24px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .menu-lateral.ativo {
+        right: 0; /* Desliza para dentro da tela */
+    }
+
+    /* Botão fechar (X) */
+    .btn-fechar-menu {
+        align-self: flex-start;
+        background: none;
+        border: 1px solid #E6E9F3;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--brand-purple);
+        cursor: pointer;
+        margin-bottom: 40px;
+    }
+
+    /* Links do menu */
+    .menu-lateral-links {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .menu-lateral-links a {
+        text-decoration: none;
+        color: var(--brand-purple);
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    /* O tracinho ciano abaixo do texto */
+    .traco-ciano {
+        width: 12px;
+        height: 3px;
+        background-color: #00E5FF;
+        border-radius: 2px;
+    }
+
+    /* Área Siga-nos */
+    .menu-lateral-social {
+        margin-bottom: auto; /* Joga os botões finais pra baixo */
+    }
+
+    .menu-lateral-social p {
+        font-size: 15px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .menu-lateral-social a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #55587B;
+        font-size: 16px;
+    }
+
+    /* Botões finais */
+    .menu-lateral-botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .menu-lateral-botoes .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .btn-ciano {
+        background-color: #00E5FF;
+        color: #000;
+    }
+}
+
+
+
+/* =========================================
    RESPONSIVO (MOBILE) - TELAS ATÉ 768px
 ========================================= */
 @media (max-width: 768px) {

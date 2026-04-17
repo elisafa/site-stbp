@@ -13,7 +13,7 @@
 </head>
 <body>
     
-    <header class="cabecalho">
+  <header class="cabecalho">
         <div class="logo">
             <img src="assets/imagens/logo.png" alt="Seminário Teológico Batista Potiguar">
         </div>
@@ -30,7 +30,38 @@
             <a href="#" class="btn btn-contorno">Espaço do aluno</a>
             <a href="https://stbpotiguar.com.br/matricula/3" target="_blank" class="btn btn-destaque">Matricule-se</a>
         </div>
+
+        <button class="btn-menu-mobile" id="btn-abrir-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
     </header>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <aside class="menu-lateral" id="menu-lateral">
+        <button class="btn-fechar-menu" id="btn-fechar-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <nav class="menu-lateral-links">
+            <a href="#">Home <span class="traco-ciano"></span></a>
+            <a href="#">STBP <span class="traco-ciano"></span></a>
+            <a href="#titulo-secao">Cursos <span class="traco-ciano"></span></a>
+        </nav>
+
+        <div class="menu-lateral-social">
+            <p>Siga-nos</p>
+            <a href="#">
+                <img src="assets/imagens/icone-instagram.svg" alt="Instagram">
+                Instagram
+            </a>
+        </div>
+
+        <div class="menu-lateral-botoes">
+            <a href="#" class="btn btn-contorno">Espaço do aluno</a>
+            <a href="https://stbpotiguar.com.br/matricula/3" class="btn btn-destaque btn-ciano">Matricule-se já</a>
+        </div>
+    </aside>
 
     <main>
         
